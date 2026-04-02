@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mirielle IT Professional</title>
+
+<!-- SEO -->
+<meta name="description" content="Mobile IT support in NJ. Computer repair, network setup, and troubleshooting. Fast and reliable service.">
+
+<style>
+* {margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+body {background:#0b0f1a;color:white;scroll-behavior:smooth;}
+
+/* NAVBAR */
+nav {
+position: sticky;
+top: 0;
+background: rgba(10,15,30,0.9);
+padding: 15px;
+display: flex;
+justify-content: space-between;
+z-index: 1000;
+}
+nav a {
+color: white;
+margin: 0 10px;
+text-decoration: none;
+}
+
+/* HERO */
+.hero {
+height: 90vh;
+background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+.overlay {
+background: rgba(0,0,0,0.6);
+padding:40px;
+border-radius:10px;
+}
+.hero h2 {font-size:42px;}
+.hero p {color:#ccc;margin:15px 0;}
+
+.btn {
+background:linear-gradient(135deg,#007bff,#4da3ff);
+border:none;
+padding:14px 25px;
+border-radius:8px;
+color:white;
+margin:10px;
+cursor:pointer;
+}
+
+/* SECTIONS */
+section {padding:60px 20px;text-align:center;}
+
+.service-container, .review-container {
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.box {
+background:#121a2b;
+margin:15px;
+padding:25px;
+width:260px;
+border-radius:12px;
+border:1px solid #1f2a44;
+transition:0.3s;
+}
+.box:hover {transform:translateY(-10px);}
+
+/* ANIMATION */
+.fade {
+opacity:0;
+transform:translateY(30px);
+transition:1s;
+}
+.fade.show {
+opacity:1;
+transform:translateY(0);
+}
+
+/* CONTACT */
+form input, form textarea {
+width:80%;
+padding:12px;
+margin:10px;
+border-radius:6px;
+border:none;
+}
+
+/* FLOAT BUTTONS */
+.whatsapp, .callbtn {
+position:fixed;
+right:20px;
+padding:15px;
+border-radius:50%;
+color:white;
+}
+.whatsapp {bottom:20px;background:#25D366;}
+.callbtn {bottom:80px;background:#007bff;}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<div>Mirielle IT</div>
+<div>
+<a href="#services">Services</a>
+<a href="#pricing">Pricing</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div class="overlay">
+<h2>Fix Your Tech Problems — Fast & Professional</h2>
+<p>Mobile IT support in New Jersey</p>
+<button class="btn" onclick="window.location.href='tel:7323542334'">Call Now</button>
+<button class="btn" onclick="window.location.href='https://calendly.com/muhammedjawneh11/30min'">Book Appointment</button>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="fade">
+<h2>Our Services</h2>
+<div class="service-container">
+<div class="box">IT Support</div>
+<div class="box">Network Setup</div>
+<div class="box">Windows Repair</div>
+</div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="fade">
+<h2>Book & Pay</h2>
+<button class="btn" onclick="window.location.href='https://buy.stripe.com/cNi14nc1T3AT7Lbe9Kb3q00'">
+Pay Now ($80)
+</button>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="fade">
+<h2>Client Reviews</h2>
+<div class="review-container">
+<div class="box">"Great service!"</div>
+<div class="box">"Fast and reliable"</div>
+<div class="box">"Highly recommend"</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="fade">
+<h2>Contact</h2>
+<form action="https://formspree.io/f/xnjobrvl" method="POST">
+<input type="text" name="name" placeholder="Name" required><br>
+<input type="email" name="email" placeholder="Email" required><br>
+<textarea name="message" placeholder="Message"></textarea><br>
+<button class="btn">Send</button>
+</form>
+</section>
+
+<a class="whatsapp" href="https://wa.me/17323542334">💬</a>
+<a class="callbtn" href="tel:7323542334">📞</a>
+
+<!-- ANIMATION SCRIPT -->
+<script>
+const elements = document.querySelectorAll('.fade');
+window.addEventListener('scroll', () => {
+elements.forEach(el => {
+const position = el.getBoundingClientRect().top;
+if(position < window.innerHeight - 100){
+el.classList.add('show');
+}
+});
+});
+</script>
+
+</body>
+</html>
